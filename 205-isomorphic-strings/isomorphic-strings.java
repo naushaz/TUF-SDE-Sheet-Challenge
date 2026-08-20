@@ -1,9 +1,12 @@
 class Solution {
     public boolean isIsomorphic(String s, String t) {
+        if (s.length() != t.length()) {
+    return false;
+}
          int[] mapS = new int[256];
         int[] mapT = new int[256];
 
-        for (int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < t.length(); i++) {
 
             char c1 = s.charAt(i);
             char c2 = t.charAt(i);
